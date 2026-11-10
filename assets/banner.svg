@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0d1b2a" />
+      <stop offset="100%" stop-color="#050a14" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#4facfe" stop-opacity="0.1" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 38px;
+      letter-spacing: -0.5px;
+    }
+    .subtitle-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      fill: #94a3b8;
+    }
+    .badge-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      fill: #e2e8f0;
+    }
+
+    /* Ambient pulse animations */
+    @keyframes pulseOrb {
+      0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.35; }
+      50% { transform: scale(1.15) translate(15px, -10px); opacity: 0.6; }
+    }
+    @keyframes pulseOrbAlt {
+      0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.25; }
+      50% { transform: scale(1.2) translate(-20px, 15px); opacity: 0.5; }
+    }
+    @keyframes floatPill1 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-7px); }
+    }
+    @keyframes floatPill2 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(6px); }
+    }
+    @keyframes floatPill3 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-5px); }
+    }
+    @keyframes scanBeam {
+      0% { transform: translateY(0px); opacity: 0.2; }
+      50% { transform: translateY(110px); opacity: 0.7; }
+      100% { transform: translateY(0px); opacity: 0.2; }
+    }
+    @keyframes radarWave {
+      0% { r: 10px; opacity: 0.8; }
+      100% { r: 75px; opacity: 0; }
+    }
+
+    .orb-1 { animation: pulseOrb 7s ease-in-out infinite; transform-origin: 200px 100px; }
+    .orb-2 { animation: pulseOrbAlt 9s ease-in-out infinite; transform-origin: 1000px 260px; }
+    .pill-1 { animation: floatPill1 4s ease-in-out infinite; }
+    .pill-2 { animation: floatPill2 5s ease-in-out infinite; }
+    .pill-3 { animation: floatPill3 4.5s ease-in-out infinite; }
+    .scanner-line { animation: scanBeam 3.5s ease-in-out infinite; }
+    .radar-circle { animation: radarWave 2.8s cubic-bezier(0.2, 0.8, 0.4, 1) infinite; }
+  </style>
+
+  <!-- Deep Background -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Subtle Cyber Grid -->
+  <g stroke="#334155" stroke-opacity="0.18" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="150" y1="0" x2="150" y2="360" />
+    <line x1="300" y1="0" x2="300" y2="360" />
+    <line x1="450" y1="0" x2="450" y2="360" />
+    <line x1="600" y1="0" x2="600" y2="360" />
+    <line x1="750" y1="0" x2="750" y2="360" />
+    <line x1="900" y1="0" x2="900" y2="360" />
+    <line x1="1050" y1="0" x2="1050" y2="360" />
+  </g>
+
+  <!-- Dynamic Glowing Orbs in Background -->
+  <circle class="orb-1" cx="220" cy="90" r="130" fill="#38bdf8" filter="url(#glow)" />
+  <circle class="orb-2" cx="980" cy="270" r="140" fill="#818cf8" filter="url(#glow)" />
+
+  <!-- Interactive Dynamic HUD Rings (Identity / Security Verification Visual) -->
+  <g transform="translate(1030, 140)">
+    <!-- Concentric radar circles -->
+    <circle cx="0" cy="0" r="65" fill="none" stroke="#38bdf8" stroke-opacity="0.15" stroke-dasharray="4 4" />
+    <circle cx="0" cy="0" r="45" fill="none" stroke="#818cf8" stroke-opacity="0.25" stroke-width="1.5" />
+    <circle cx="0" cy="0" r="25" fill="none" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1.5" />
+    <circle class="radar-circle" cx="0" cy="0" r="10" fill="none" stroke="#00f2fe" stroke-width="2" />
+    <!-- Biometric shield icon center -->
+    <path d="M-12 -12 L12 -12 Q14 2 0 16 Q-14 2 -12 -12 Z" fill="none" stroke="#38bdf8" stroke-width="2.5" />
+    <circle cx="0" cy="-2" r="4" fill="#38bdf8" />
+    <!-- Scanning beam effect -->
+    <line class="scanner-line" x1="-50" y1="-50" x2="50" y2="-50" stroke="#38bdf8" stroke-width="2" filter="url(#softGlow)" />
+  </g>
+
+  <!-- Card Border outline -->
+  <rect x="8" y="8" width="1184" height="344" rx="12" fill="none" stroke="url(#primaryGrad)" stroke-opacity="0.3" stroke-width="1.5" />
+
+  <!-- FOREGROUND CONTENT: Header Tag Pill -->
+  <g transform="translate(60, 48)">
+    <rect width="215" height="28" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1" />
+    <circle cx="14" cy="14" r="4.5" fill="#22c55e" filter="url(#softGlow)" />
+    <text x="26" y="19" class="badge-text" fill="#38bdf8" font-size="11.5" letter-spacing="0.5">CURATED AWESOME MATRIX</text>
+  </g>
+
+  <!-- Main Title (Strictly Foreground with Vibrant Gradient) -->
+  <text x="60" y="125" class="title-text" fill="url(#primaryGrad)" filter="url(#softGlow)">
+    Security, Compliance &amp; Identity Verification
+  </text>
+
+  <!-- Subtitle (Clear, Readable) -->
+  <text x="60" y="162" class="subtitle-text">
+    The ultimate benchmark directory comparing enterprise SaaS leaders and modern open-source stacks
+  </text>
+  <text x="60" y="186" class="subtitle-text" font-size="14.5" fill="#64748b">
+    SOC 2 • ISO 27001 • HIPAA • Automated Evidence Collection • KYC / AML • Biometric Proofing • GRC Systems
+  </text>
+
+  <!-- Dynamic Foreground Badge Chips -->
+  <!-- Chip 1: SaaS Leaders -->
+  <g class="pill-1" transform="translate(60, 230)">
+    <rect width="180" height="42" rx="10" fill="url(#cardGrad)" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1" />
+    <text x="16" y="26" class="badge-text" fill="#38bdf8">🏢 Commercial SaaS</text>
+  </g>
+
+  <!-- Chip 2: Open Source Tools -->
+  <g class="pill-2" transform="translate(255, 230)">
+    <rect width="185" height="42" rx="10" fill="url(#cardGrad)" stroke="#818cf8" stroke-opacity="0.4" stroke-width="1" />
+    <text x="16" y="26" class="badge-text" fill="#818cf8">⚡ Open-Source Stacks</text>
+  </g>
+
+  <!-- Chip 3: Trust Center & Evidence -->
+  <g class="pill-3" transform="translate(455, 230)">
+    <rect width="195" height="42" rx="10" fill="url(#cardGrad)" stroke="#c084fc" stroke-opacity="0.4" stroke-width="1" />
+    <text x="16" y="26" class="badge-text" fill="#c084fc">🛡️ Automated Evidence</text>
+  </g>
+
+  <!-- Chip 4: KYC & Liveness -->
+  <g class="pill-1" transform="translate(665, 230)">
+    <rect width="195" height="42" rx="10" fill="url(#cardGrad)" stroke="#2dd4bf" stroke-opacity="0.4" stroke-width="1" />
+    <text x="16" y="26" class="badge-text" fill="#2dd4bf">👤 Biometric KYC &amp; IDV</text>
+  </g>
+
+  <!-- Bottom Metric Bar -->
+  <g transform="translate(60, 305)">
+    <text x="0" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#64748b" letter-spacing="0.3">
+      MARKET FOCUS: <tspan fill="#94a3b8">GRC AUTOMATION &amp; TRUST CENTERS</tspan> &nbsp;|&nbsp; <tspan fill="#38bdf8">$14B+ GLOBAL IDV</tspan> &nbsp;|&nbsp; <tspan fill="#818cf8">$21B+ GRC MARKET</tspan>
+    </text>
+  </g>
+</svg>
