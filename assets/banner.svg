@@ -184,7 +184,7 @@
   <!-- Bottom Metric Bar -->
   <g transform="translate(60, 305)">
     <text x="0" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#64748b" letter-spacing="0.3">
-      MARKET FOCUS: <tspan fill="#94a3b8">GRC AUTOMATION &amp; TRUST CENTERS</tspan> &nbsp;|&nbsp; <tspan fill="#38bdf8">$14B+ GLOBAL IDV</tspan> &nbsp;|&nbsp; <tspan fill="#818cf8">$21B+ GRC MARKET</tspan>
+      MARKET FOCUS: <tspan fill="#94a3b8">GRC AUTOMATION &amp; TRUST CENTERS</tspan> &#160;|&#160; <tspan fill="#38bdf8">$14B+ GLOBAL IDV</tspan> &#160;|&#160; <tspan fill="#818cf8">$21B+ GRC MARKET</tspan>
     </text>
   </g>
 </svg>
